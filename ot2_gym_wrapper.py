@@ -87,7 +87,7 @@ class OT2Env(gym.Env):
             # we can also give the agent a positive reward for completing the task
             self.end_time = time.time()
             time_taken = self.end_time - self.start_time
-            reward -= 0.05 * time_taken
+            reward += 1000 - 0.05 * time_taken
         else:
             terminated = False
 
